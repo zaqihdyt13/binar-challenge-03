@@ -1,0 +1,282 @@
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+  box-shadow: 0 3px 6px 3px rgba(0, 0, 0, 0.7);
+}
+
+.add-content .content {
+  height: 100vh;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+  margin: 0;
+  padding: 0 2.5rem;
+}
+
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  margin-bottom: 1.5rem;
+  background: #fff;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+  list-style-type: none;
+  transition: 0.2s;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+ul li:hover {
+  background: #ddd;
+}
+
+ul li.checked {
+  color: red;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  content: "";
+  position: absolute;
+  border-color: rgb(0, 140, 255);
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+.task-edit {
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+  position: relative;
+}
+
+.task-edit .button {
+  width: 6.5rem;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  position: absolute;
+  right: 5rem;
+}
+
+.task-action .close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: red;
+  font-size: 1rem;
+  padding: 12px 17px 12px 17px;
+  transition: 0.3s;
+}
+
+.close:nth-child(2) {
+  right: 2rem;
+  font-size: 1.2rem;
+  color: darkorange;
+}
+
+.close:hover {
+  transform: scale(1.2);
+}
+
+.add-todo {
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  background-color: #fff;
+  padding: 30px 40px;
+  width: 90%;
+  color: black;
+  text-align: center;
+}
+
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+h2 {
+  font-weight: 800;
+}
+
+.search-add {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.search-box {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: start;
+  align-items: center;
+}
+
+.search-box input {
+  width: 22.5rem;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.search-box .button {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.search-row2 {
+  display: flex;
+  align-items: center;
+}
+
+.search-row2 .search2 {
+  width: 60%;
+  display: flex;
+  justify-content: start;
+}
+
+.search2 .button {
+  width: 25rem;
+}
+
+.add-box {
+  width: 40%;
+  display: flex;
+  justify-content: end;
+}
+
+.add-box button {
+  width: 11rem;
+}
+
+.add-container {
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+.add-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+}
+
+.add-input input {
+  width: 45rem;
+  /* border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px; */
+}
+
+.add-input .button {
+  width: 2.5rem;
+  height: 2.5rem;
+  /* border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px; */
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.submit {
+  display: flex;
+}
+
+.submit .button {
+  width: 45rem;
+  margin-top: 1rem;
+}
+
+.search-filter {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 40px;
+  color: black;
+  text-align: center;
+}
+
+.search-filter:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  outline: none;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+input::placeholder {
+  color: rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+}
+
+.filter {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter h2 {
+  font-weight: 600;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.button {
+  padding: 10px;
+  width: 13.5rem;
+  background: rgb(18, 167, 167);
+  border: 2px solid transparent;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: #fff;
+  color: rgb(18, 167, 167);
+  border: 2px solid rgb(18, 167, 167);
+}
+
+.result-text {
+  text-align: center;
+}
